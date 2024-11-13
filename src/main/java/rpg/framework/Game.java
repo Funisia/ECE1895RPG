@@ -5,7 +5,6 @@ public interface Game {
 
     public void getPosition();
 
-
   // === Mutator methods ======================================
 
     public boolean moveRoom ();

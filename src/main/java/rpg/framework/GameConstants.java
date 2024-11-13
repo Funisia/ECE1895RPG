@@ -2,7 +2,8 @@ package rpg.framework;
 
 public class GameConstants {
 
-  public static final int WORLDSIZE = 16;
+  // Map size
+  public static final int WORLDSIZE = 25;
   // Classes
   public static final String WIZARD    = "wizard";
   public static final String ROGUE    = "rogue";
