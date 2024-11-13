@@ -1,6 +1,6 @@
-package hotciv.standard;
+package rpg.standard;
 
-import hotciv.framework.*;
+import rpg.framework.*;
 
 import org.junit.*;
 import static org.junit.Assert.*;
