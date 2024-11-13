@@ -10,4 +10,13 @@ import java.util.*;
 
 public class TestList {
 
+    @Before
+    public void setUp() {
+
+    }
+
+    @Test
+    public void test() {
+
+    }
 }
