@@ -12,6 +12,7 @@ public class GameConstants {
   public static final String BATTLE    = "battle";
   public static final String EVENT    = "event";
   public static final String HEAL    = "heal";
+  public static final String START    = "start";
   public static final String MINIBOSS     = "miniboss";
   public static final String BOSS = "boss";
 

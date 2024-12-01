@@ -15,4 +15,12 @@ public class GameImpl implements Game {
     public void endTurn() {
 
     }
+
+    public void createRoom() {
+
+    }
+
+    public void getRoom() {
+
+    }
 }
