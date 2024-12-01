@@ -1,18 +1,26 @@
-package rpg.standard.Rooms;
+package rpg.standard.Rooms.RoomLayoutStrategies;
 
+import rpg.framework.Game;
 import rpg.framework.Room;
 import rpg.framework.RoomLayout;
+import rpg.framework.Strategies.RoomLayoutStrategy;
+import rpg.standard.Rooms.BattleRoom;
+import rpg.standard.Rooms.BossRoom;
+import rpg.standard.Rooms.EventRoom;
+import rpg.standard.Rooms.HealRoom;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class RoomLayoutImpl implements RoomLayout {
+public class RandomRoomLayout implements RoomLayoutStrategy {
 
     private List<List<Room>> routes;
     private Room bossRoom;
 
-    public RoomLayoutImpl(int numberOfRoutes, int numberOfRooms) {
+    public void createWorld(Game game) {
+        int numberOfRoutes = 3;
+        int numberOfRooms = 3;
         routes = new ArrayList<>();
         for (int i = 0; i < numberOfRoutes; i++) {
             List<Room> route = new ArrayList<>();
@@ -56,5 +64,9 @@ public class RoomLayoutImpl implements RoomLayout {
 
     public boolean getBossRoom() {
         return bossRoom != null;
+    }
+
+    public void generateRoute(Game game) {
+
     }
 }
