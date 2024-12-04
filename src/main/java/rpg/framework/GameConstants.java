@@ -8,6 +8,10 @@ public class GameConstants {
   public static final String WIZARD    = "wizard";
   public static final String RANGER    = "ranger";
   public static final String WARRIOR   = "warrior";
+  // Enemies
+  public static final String BAT = "bat";
+  public static final String SKELETON = "skeleton";
+  public static final String SLIME = "slime";
   // Room types
   public static final String BATTLE    = "battle";
   public static final String EVENT    = "event";
