@@ -13,4 +13,8 @@ public interface Game {
 
     public void endTurn();
 
+    public void attackUnit(Position unitToAttack);
+
+
+
 }

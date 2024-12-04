@@ -51,6 +51,10 @@ public class RandomRoomLayout implements RoomLayoutStrategy {
         return routes.get(routeIndex);
     }
 
+    public List<List<Room>> getRouteList() {
+        return routes;
+    }
+
     public int getRouteSize(int routeIndex) {
         return routes.get(routeIndex).size();
     }

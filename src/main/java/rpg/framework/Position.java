@@ -23,9 +23,8 @@ public class Position {
         return room;
     }
 
-    @Override
     public String toString() {
-        return "Route: " + routeIndex + ", Room: " + roomIndex + ", Room Type: " + room.getClass().getSimpleName();
+        return "Route: " + routeIndex + ", Room: " + roomIndex + ", Room Type: " + room.getTypeString();
     }
 }
 
