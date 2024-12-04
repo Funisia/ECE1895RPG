@@ -3,8 +3,10 @@ package rpg.standard.UnitTests;
 import org.junit.*;
 import rpg.framework.Game;
 import rpg.framework.RoomLayout;
+import rpg.framework.Strategies.RoomLayoutStrategy;
 import rpg.standard.GameImpl;
 import rpg.standard.Rooms.*;
+import rpg.standard.Rooms.RoomLayoutStrategies.NotRandomRoomLayout;
 import rpg.standard.Rooms.RoomLayoutStrategies.RandomRoomLayout;
 import rpg.standard.Versions.GameWithoutRandomization;
 
@@ -13,7 +15,7 @@ import static org.hamcrest.CoreMatchers.*;
 
 public class RoomTests {
 
-    private Game game;
+    private GameImpl game;
 
     private BattleRoom battleRoom;
     private BossRoom bossRoom;
@@ -43,13 +45,15 @@ public class RoomTests {
 
     @Test
     public void testRoomLayoutListGenerates() {
-//        //Generates routes
-//        roomLayout = new RandomRoomLayout(3, 3);
-//
-//        //Asserts amount & size of routes
-//        assertThat(roomLayout.getRouteSize(1), is(3));
-//        assertThat(roomLayout.getAmountOfRoutes(), is(3));
-//        assertThat(roomLayout.getBossRoom(), is (true));
+        // Get the room layout strategy already initialized in GameImpl
+        RoomLayoutStrategy roomLayoutStrategy = game.getRoomLayoutStrategy();
+
+        // Cast to NotRandomRoomLayout if needed
+        NotRandomRoomLayout roomLayout = (NotRandomRoomLayout) roomLayoutStrategy;
+
+        // Assert the size of routes
+        assertThat(roomLayout.getRouteSize(1), is(3)); // Checks the size of the second route
+        assertThat(roomLayout.getAmountOfRoutes(), is(3)); // Checks the total number of routes
     }
 
     @Test

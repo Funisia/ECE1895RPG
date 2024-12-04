@@ -1,5 +1,7 @@
 package rpg.framework;
 
+import rpg.framework.Strategies.RoomLayoutStrategy;
+
 public interface Game {
   // === Accessor methods ===================================
 
@@ -10,4 +12,5 @@ public interface Game {
     public boolean moveRoom ();
 
     public void endTurn();
+
 }

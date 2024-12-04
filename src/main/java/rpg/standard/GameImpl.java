@@ -23,6 +23,11 @@ public class GameImpl implements Game {
         this.currentRoomIndex = 0;
     }
 
+    public RoomLayoutStrategy getRoomLayoutStrategy() {
+        return this.roomLayoutStrategy;
+    }
+
+
     // Get the current position in the current route
     public Position getPosition() {
         Room currentRoom = routes.get(currentRoute).get(currentRoomIndex);
