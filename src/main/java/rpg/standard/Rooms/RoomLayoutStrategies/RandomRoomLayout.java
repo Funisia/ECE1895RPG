@@ -16,7 +16,6 @@ import java.util.Random;
 public class RandomRoomLayout implements RoomLayoutStrategy {
 
     private List<List<Room>> routes;
-    private Room bossRoom;
 
     public void createWorld(Game game) {
         int numberOfRoutes = 3;
@@ -28,8 +27,6 @@ public class RandomRoomLayout implements RoomLayoutStrategy {
             generateRoute(route, numberOfRooms);
         }
 
-        // Create a single boss room
-        bossRoom = new BossRoom();
     }
 
     public void generateRoute(List<Room> route, int numberOfRooms) {
@@ -62,11 +59,4 @@ public class RandomRoomLayout implements RoomLayoutStrategy {
         return routes.size();
     }
 
-    public boolean getBossRoom() {
-        return bossRoom != null;
-    }
-
-    public void generateRoute(Game game) {
-
-    }
 }

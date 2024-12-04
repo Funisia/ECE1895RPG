@@ -3,7 +3,7 @@ package rpg.framework;
 public interface Game {
   // === Accessor methods ===================================
 
-    public void getPosition();
+    public Position getPosition();
 
   // === Mutator methods ======================================
 

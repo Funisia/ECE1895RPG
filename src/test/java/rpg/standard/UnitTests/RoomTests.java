@@ -1,24 +1,30 @@
 package rpg.standard.UnitTests;
 
 import org.junit.*;
+import rpg.framework.Game;
 import rpg.framework.RoomLayout;
+import rpg.standard.GameImpl;
 import rpg.standard.Rooms.*;
 import rpg.standard.Rooms.RoomLayoutStrategies.RandomRoomLayout;
+import rpg.standard.Versions.GameWithoutRandomization;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 
 public class RoomTests {
 
+    private Game game;
+
     private BattleRoom battleRoom;
     private BossRoom bossRoom;
     private EventRoom eventRoom;
     private HealRoom healRoom;
     private StartRoom startRoom;
-    private RoomLayout roomLayout;
 
     @Before
     public void setUp() {
+        // Can switch between with or without randomization
+        game = new GameImpl(new GameWithoutRandomization());
         battleRoom = new BattleRoom();
         bossRoom = new BossRoom();
         eventRoom = new EventRoom();
@@ -37,10 +43,10 @@ public class RoomTests {
 
     @Test
     public void testRoomLayoutListGenerates() {
-        // Generates routes
-        //roomLayout = new RandomRoomLayout(3, 3);
-
-        // Asserts amount & size of routes
+//        //Generates routes
+//        roomLayout = new RandomRoomLayout(3, 3);
+//
+//        //Asserts amount & size of routes
 //        assertThat(roomLayout.getRouteSize(1), is(3));
 //        assertThat(roomLayout.getAmountOfRoutes(), is(3));
 //        assertThat(roomLayout.getBossRoom(), is (true));
