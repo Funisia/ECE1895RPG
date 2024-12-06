@@ -5,7 +5,6 @@ import rpg.framework.Room;
 import rpg.framework.RoomLayout;
 import rpg.framework.Strategies.RoomLayoutStrategy;
 import rpg.standard.Rooms.BattleRoom;
-import rpg.standard.Rooms.BossRoom;
 import rpg.standard.Rooms.EventRoom;
 import rpg.standard.Rooms.HealRoom;
 

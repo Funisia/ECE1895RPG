@@ -17,6 +17,7 @@ public class GameImpl implements Game {
     private List<List<Room>> routes;
     private int currentRoute;
     private int currentRoomIndex;
+    private Room currentRoom;
 
     public GameImpl(AbstractFactory version) {
         this.roomLayoutStrategy = version.roomLayoutStrategy();
@@ -41,7 +42,6 @@ public class GameImpl implements Game {
         return new Position(currentRoute, currentRoomIndex, currentRoom);
     }
 
-
     // Returns a specific route
     public List<Room> getRoute(int routeIndex) {
         return this.roomLayoutStrategy.getRoute(routeIndex) ;
@@ -52,13 +52,19 @@ public class GameImpl implements Game {
         return this.roomLayoutStrategy.getRouteList();
     }
 
+    public Room getCurrentRoom (List<List<Room>> routeNumber, List<Room> routeIndex) {
+        return null;
+    }
+
     // Move to the next room in the current route
     public boolean moveRoom() {
-        if (currentRoomIndex < routes.get(currentRoute).size() - 1) {
-            currentRoomIndex++;
-            return true; // Successfully moved
+        if (currentRoomIndex >= routes.get(currentRoute).size() - 1) {
+            return false; // No more rooms in the route
         }
-        return false; // No more rooms in the route
+
+        // Add moveRoom logic
+
+        return true;
     }
 
     // Switch to another route

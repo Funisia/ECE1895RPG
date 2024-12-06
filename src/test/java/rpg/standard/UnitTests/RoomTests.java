@@ -48,7 +48,7 @@ public class RoomTests {
         // Get the room layout strategy already initialized in GameImpl
         RoomLayoutStrategy roomLayoutStrategy = game.getRoomLayoutStrategy();
 
-        // Cast to NotRandomRoomLayout if needed
+        // Cast to NotRandomRoomLayout
         NotRandomRoomLayout roomLayout = (NotRandomRoomLayout) roomLayoutStrategy;
 
         // Assert the size of routes
@@ -57,7 +57,11 @@ public class RoomTests {
     }
 
     @Test
-    public void testRouteRouteIsFair() {
+    public void testRouteGenerationType() {
+        // Get the room layout strategy already initialized in GameImpl
+        RoomLayoutStrategy roomLayoutStrategy = game.getRoomLayoutStrategy();
+
+
 
     }
 }
