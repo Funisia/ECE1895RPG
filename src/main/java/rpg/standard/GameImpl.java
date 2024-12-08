@@ -9,7 +9,7 @@ import java.util.List;
 public class GameImpl implements Game {
 
     // Array to hold player and enemies in rooms
-    private Enemy[][] EnemyArray = new Enemy[3][3];
+    private Enemy[][] EnemygitArray = new Enemy[3][3];
     private Class[][] ClassArray = new Class[5][1];
     // Strategies
     private RoomLayoutStrategy roomLayoutStrategy;
